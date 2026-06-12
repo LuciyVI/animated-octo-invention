@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram bot for existing 3x-ui
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/nix/bot-telegram
+ExecStart=/home/nix/bot-telegram/.venv/bin/python -m bot.main
+Restart=always
+RestartSec=5
+EnvironmentFile=/home/nix/bot-telegram/.env
+
+[Install]
+WantedBy=default.target

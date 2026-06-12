@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram bot for existing 3x-ui
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/telegram-3xui-bot
+ExecStart=/opt/telegram-3xui-bot/venv/bin/python -m bot.main
+Restart=always
+RestartSec=5
+EnvironmentFile=/opt/telegram-3xui-bot/.env
+
+[Install]
+WantedBy=multi-user.target
+
