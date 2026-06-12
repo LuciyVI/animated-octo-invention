@@ -1,6 +1,6 @@
 # Telegram bot for existing 3x-ui
 
-Бот управляет клиентскими конфигурациями в уже запущенной панели 3x-ui. В целевой модели он проверяет членство пользователя в разрешённой Telegram-группе, автоматически создаёт для него отдельный inbound из template `Moroz`, привязывает inbound к Telegram ID и даёт создать до 5 устройств внутри собственного inbound. По умолчанию бот не удаляет inbound и не меняет core-настройки template или пользовательских inbound: port/protocol/streamSettings/sniffing/TLS/REALITY не редактируются после создания. Core-редактирование собственного inbound можно включить отдельным флагом `USER_CAN_CHANGE_INBOUND_CORE_SETTINGS=true`. Основная модель:
+Бот управляет клиентскими конфигурациями в уже запущенной панели 3x-ui. В целевой модели он проверяет членство пользователя в разрешённой Telegram-группе, автоматически создаёт для него отдельный inbound из шаблона, привязывает inbound к Telegram ID и даёт создать до 5 устройств внутри собственного inbound. По умолчанию бот не удаляет inbound и не меняет core-настройки template или пользовательских inbound: port/protocol/streamSettings/sniffing/TLS/REALITY не редактируются после создания. Core-редактирование собственного inbound можно включить отдельным флагом `USER_CAN_CHANGE_INBOUND_CORE_SETTINGS=true`. Основная модель:
 
 ```text
 Telegram group member -> auto-created inbound_id -> up to 5 client configs
